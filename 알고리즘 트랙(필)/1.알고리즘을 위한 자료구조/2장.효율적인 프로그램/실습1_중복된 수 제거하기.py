@@ -1,0 +1,15 @@
+
+def removeDuplicate(nums):
+    #내가 푼거
+	#return list(set(nums))
+	result = [nums[0]]
+	for i in range(1,len(nums)):
+		if nums[i] != nums[i-1]:
+			result.append(nums[i])
+	return result
+	
+def main():
+    print(removeDuplicate([1, 1, 2, 2, 2, 2, 5, 7, 7, 8])) # [1, 2, 5, 7, 8]을 리턴해야 합니다
+
+if __name__ == "__main__":
+    main()
